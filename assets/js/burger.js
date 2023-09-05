@@ -9,6 +9,12 @@ const ACTIVE_BURGER_BTN_CLASS = 'button-burger-line_active';
 function listenerBtnBurger() {
   burgerMenu.classList.toggle(ACTIVE_BURGER_MENU_CLASS);
   btnLineBurger.classList.toggle(ACTIVE_BURGER_BTN_CLASS);
+
+  if (burgerMenu.classList.contains(ACTIVE_BURGER_MENU_CLASS)) {
+    document.body.style.overflow = 'hidden'; 
+  } else {
+    document.body.style.overflow = ''; 
+  }
 }
 
 btnBurger.addEventListener('click', listenerBtnBurger);

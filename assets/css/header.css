@@ -139,5 +139,6 @@
 
   #nav-bar-burger {
     display: flex;
+    z-index: 1;
   }
 }

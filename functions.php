@@ -17,8 +17,15 @@ function add_logo() {
 	] );
 }
 
+function add_menu() {
+    register_nav_menu( 'header_menu', 'Главное меню');
+}
+
 
 add_action('wp_enqueue_scripts', 'steklo_assets');
+
 add_action( 'after_setup_theme', 'add_logo' );
+
+add_action( 'after_setup_theme', 'add_menu' );
 
 show_admin_bar(false);
