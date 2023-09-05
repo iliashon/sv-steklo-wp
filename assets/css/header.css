@@ -35,7 +35,7 @@
   z-index: 10;
   position: absolute;
   right: 30px;
-  top: 40px;
+  top: 32px;
   height: 16px;
 }
 
@@ -85,6 +85,7 @@
   height: 2px;
   background-color: #06bcb0;
   transition: 0.3s;
+  transform: translateY(8px);
 }
 
 .button-burger-line::after {
@@ -112,7 +113,7 @@
 }
 
 .button-burger-line_active::after {
-  display: none;
+  top: 0;
 }
 
 .button-burger-line_active::before {
