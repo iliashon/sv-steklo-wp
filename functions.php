@@ -8,6 +8,7 @@ function steklo_assets() {
 }
 
 function add_logo() {
+    add_theme_support('post-thumbnails', array('post'));
     add_theme_support( 'custom-logo', [
 		'height'      => 50,
 		'width'       => 200,
@@ -15,6 +16,7 @@ function add_logo() {
 		'flex-height' => false,
 		'header-text' => '',
 	] );
+    add_image_size( 'adv_thumbnail', 100, 100, true );
 }
 
 function add_menu() {

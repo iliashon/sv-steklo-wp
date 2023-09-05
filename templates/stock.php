@@ -9,7 +9,7 @@ get_header();
     <main class="stock">
       <section class="container">
         <div class="stock-content">
-          <h2>СПЕШИТЕ КУПИТЬ ВЫГОДНО!</h2>
+          <h2><?= the_content(); ?></h2>
           <div class="stock-block">
             <?php 
               $stocks = CFS()->get('stock');
