@@ -1,16 +1,22 @@
 .stock-block {
 display: flex;
 justify-content: space-around;
+flex-direction: column;
 }
 .stock_item {
-  border: 1px black solid;
-  width: 250px;
-  margin-top: 30px;
-  padding: 10px;
+  border: 1px #06bcb0 solid;
+  margin: 10px 0;
+  /* padding: 10px; */
   border-radius: 20px;
+  display: flex;
+  overflow: hidden;
 }
 .stock_item img {
-  width: 100%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 20px;
 }
 .stock_item p {
   font-size: 13px;
@@ -18,4 +24,13 @@ justify-content: space-around;
 }
 .stock-content h2, h5 {
   color:#979797;
+}
+
+.stock_description h4 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.stock_description p {
+  margin-top: 30px;
 }
