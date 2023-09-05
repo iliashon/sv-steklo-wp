@@ -1,0 +1,143 @@
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#logoheader {
+  width: 200px;
+  height: 50px;
+}
+
+#nav-bar {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+#nav-bar a {
+  color: #6d7379;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+#nav-bar .nav-bar-a__active {
+  color: #06bcb0;
+}
+
+#nav-bar a:hover {
+  color: #06bcb0;
+}
+
+#button-burger {
+  display: none;
+  z-index: 10;
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  height: 16px;
+}
+
+#nav-bar-burger {
+  position: absolute;
+  right: -100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: cadetblue;
+  width: 320px;
+  box-sizing: border-box;
+  height: 100%;
+  align-items: center;
+  gap: 2em;
+  padding-top: 4em;
+  transition: 0.3s;
+}
+
+#nav-bar-burger a {
+  font-size: 1.2em;
+}
+
+#nav-bar-burger {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+#nav-bar-burger a {
+  color: #6d7379;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+#nav-bar-burger .nav-bar-a__active {
+  color: #06bcb0;
+}
+
+#nav-bar-burger a:hover {
+  color: #06bcb0;
+}
+
+.button-burger-line {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #06bcb0;
+  transition: 0.3s;
+}
+
+.button-burger-line::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 25px;
+  height: 2px;
+  background-color: #06bcb0;
+  transition: 0.3s;
+}
+
+.button-burger-line::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 25px;
+  height: 2px;
+  background-color: #06bcb0;
+  transition: 0.3s;
+}
+
+.button-burger-line_active {
+  transform: rotate(45deg);
+}
+
+.button-burger-line_active::after {
+  display: none;
+}
+
+.button-burger-line_active::before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.nav-bar-burger_active {
+  right: 0 !important;
+}
+
+#nav-bar-burger {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  #nav-bar {
+    display: none;
+  }
+
+  #button-burger {
+    display: block;
+  }
+
+  #nav-bar-burger {
+    display: flex;
+  }
+}

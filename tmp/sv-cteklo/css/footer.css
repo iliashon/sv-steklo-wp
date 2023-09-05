@@ -1,0 +1,26 @@
+.footer-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  color: #fff;
+}
+
+.footer-menu h4 {
+  color: #047671;
+  margin-bottom: 10px;
+}
+
+.footer-info {
+  width: 250px;
+  margin: 20px 0;
+}
+
+.footer-menu a {
+  color: #fff;
+}
+
+#footer {
+  background-color: #06bcb0;
+}

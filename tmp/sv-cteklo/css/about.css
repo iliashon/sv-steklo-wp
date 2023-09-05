@@ -1,0 +1,44 @@
+.about-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.about-block img {
+  max-width: 47%;
+}
+
+.about-info {
+  max-width: 47%;
+}
+
+.about-info h2 {
+  margin-bottom: 20px;
+}
+
+.about-info p {
+  line-height: 2em;
+  color:#979797;
+  font-weight: 300;
+}
+
+/* footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+} */
+
+@media (max-width: 1150px) {
+  .about-block img {
+    max-width: 100%;
+  }
+  .about-info {
+    max-width: 100%;
+  }
+  /* footer {
+    position: relative;
+  } */
+}

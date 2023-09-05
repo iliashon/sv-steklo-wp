@@ -1,0 +1,21 @@
+.stock-block {
+display: flex;
+justify-content: space-around;
+}
+.stock_item {
+  border: 1px black solid;
+  width: 250px;
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 20px;
+}
+.stock_item img {
+  width: 100%;
+}
+.stock_item p {
+  font-size: 13px;
+  color:#979797;
+}
+.stock-content h2, h5 {
+  color:#979797;
+}
