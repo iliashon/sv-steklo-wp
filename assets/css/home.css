@@ -1,11 +1,11 @@
 .home-slider {
-  background: url(../../tmp/sv-cteklo/assets/img/fonbg.jpg);
+  background: url(../img/fonbg.jpg);
   width: 100%;
   height: 220px;
 }
 
 .home-advantages {
-  background: url(../../tmp/sv-cteklo/assets/img/chair.jpg);
+  background: url(../img/chair.jpg);
   background-repeat: no-repeat;
   background-position-y: center;
   width: 100%;

@@ -7,14 +7,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <!--  <link rel="stylesheet" href="../style.css" />-->
   <?php wp_head(); ?>
-  <title>Sv-steklo</title>
+  <title>СВ-СТЕКЛО</title>
 </head>
 
 <body>
   <header id="header">
     <section class="container">
       <div class="header-menu">
-        <a href="./home.html"><img id="logoheader" src="./assets/img/logoheader.png" alt="" /></a>
+      <?php the_custom_logo();?>
         <nav id="nav-bar">
           <a href="./home.html" class="nav-bar-a__active">ГЛАВНАЯ</a>
           <a href="./products.html">ПРОДУКЦИЯ</a>
