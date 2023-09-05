@@ -19,6 +19,6 @@
     </div>
   </section>
 </footer>
-<script src="../js/burger.js"></script>
+<?php wp_footer(); ?>
 </body>
 </html>

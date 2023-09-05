@@ -1,3 +1,5 @@
+<?php get_header(); ?>
+
 <main>
   <section class="home-slider">
     <div class="container">
@@ -65,3 +67,5 @@
     </div>
   </section>
 </main>
+
+<?php get_footer(); ?>

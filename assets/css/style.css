@@ -1,11 +1,11 @@
-@import url(./css/header.css);
-@import url(./css/footer.css);
-@import url(./css/contacts.css);
-@import url(./css/about.css);
-@import url(./css/stock.css);
-@import url(./css/services.css);
-@import url(./css/home.css);
-@import url(./css/products-menu.css);
+@import url(header.css);
+@import url(footer.css);
+@import url(contacts.css);
+@import url(about.css);
+@import url(stock.css);
+@import url(services.css);
+@import url(home.css);
+@import url(products-menu.css);
 
 * {
   margin: 0;
@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
-  background: url(./assets/img/header-bg.png) repeat;
+  background: url(../../tmp/sv-cteklo/assets/img/header-bg.png) repeat;
 }
 
 main {
