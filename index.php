@@ -19,17 +19,17 @@ get_header();
         <div class="name-product-list">
           <h5>НАША ПРОДУКЦИЯ</h5>
         </div>
-        <ul class="products-list">
+        <div class="products-list">
           <?php $terms = get_terms([
                   'taxonomy' => 'product_cat',
                   'hide_empty' => false,
                   'parent' => 41
                 ]);
           foreach( $terms as $single_cat ){
-            echo '<li class="products-item"> <a href="' . get_term_link( $single_cat ) . '"> <h6 class="product-item-title">' . $single_cat->name . '</h6></a> </li>';
+            echo '<a href="' . get_term_link( $single_cat ) . '" class="products-item"> <h6 class="product-item-title">' . $single_cat->name . '</h6> </a>';
           }
           ?>
-        </ul>
+        </div>
       </aside>
       <section class="home-main-info">
             <div class="home-about">
@@ -72,7 +72,7 @@ get_header();
                         <div class="home-services-item-img-block">
                           <?= get_the_post_thumbnail( $post ); ?>
                         </div>
-                        <p><?= $posts[0]->post_title; ?></p>
+                        <p><?= $post->post_title; ?></p>
                       </div>
                     <?php
                   }

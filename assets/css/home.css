@@ -121,6 +121,11 @@
   background-color: #fff;
   box-sizing: border-box;
   border-bottom: 4px solid #06bcb0;
+  height: 200px;
+}
+
+.home-services-item p {
+  font-size: 16px;
 }
 
 .home-services-all-btn {
