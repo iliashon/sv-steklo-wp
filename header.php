@@ -41,15 +41,6 @@
           'menu_id' => 'nav-bar-burger'
         ]);
       ?>
-        <nav id="nav-bar-burger">
-          <a href="./home.html" class="nav-bar-a__active">ГЛАВНАЯ</a>
-          <a href="./products.html">ПРОДУКЦИЯ</a>
-          <a href="./catalog.html">КАТАЛОГ СТЕКЛА</a>
-          <a href="./stock.html">АКЦИИ</a>
-          <a href="./services.html">УСЛУГИ</a>
-          <a href="./about.html">О НАС</a>
-          <a href="./contacts.html">КОНТАКТЫ</a>
-        </nav>
       </div>
     </section>
   </header>

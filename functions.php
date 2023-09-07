@@ -23,6 +23,11 @@ function add_menu() {
     register_nav_menu( 'header_menu', 'Главное меню');
 }
 
+function mytheme_add_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
 add_action('wp_enqueue_scripts', 'steklo_assets');
 
@@ -30,4 +35,4 @@ add_action( 'after_setup_theme', 'add_logo' );
 
 add_action( 'after_setup_theme', 'add_menu' );
 
-show_admin_bar(false);
+// show_admin_bar(false);
