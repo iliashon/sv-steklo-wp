@@ -8,11 +8,11 @@
   <?php wp_head(); ?>
   <title>
     <?php
-      if(is_404()) {
-        echo 'Error 404';
-      } else {
-        the_title();
-      }
+    if (is_404()) {
+      echo 'Error 404';
+    } else {
+      the_title();
+    }
     ?>
   </title>
 </head>
@@ -21,26 +21,26 @@
   <header id="header">
     <section class="container">
       <div class="header-menu">
-      <?php the_custom_logo();?>
-      <?php 
-        wp_nav_menu( [
+        <?php the_custom_logo(); ?>
+        <?php
+        wp_nav_menu([
           'theme_location' => 'header_menu',
           'container' => '',
           'menu_class' => '',
           'menu_id' => 'nav-bar'
         ]);
-      ?>
+        ?>
         <div id="button-burger">
           <span class="button-burger-line"></span>
         </div>
-        <?php 
-        wp_nav_menu( [
+        <?php
+        wp_nav_menu([
           'theme_location' => 'header_menu',
           'container' => '',
           'menu_class' => '',
           'menu_id' => 'nav-bar-burger'
         ]);
-      ?>
+        ?>
       </div>
     </section>
   </header>
