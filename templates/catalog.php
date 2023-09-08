@@ -1,47 +1,39 @@
-<?php 
+<?php
 /* 
 Template Name: Каталог стекла
 */
 
 get_header();
+
+$products_cat = get_posts([
+  'numberposts' => -1,
+  'category' => 'services',
+]);
 ?>
 
-    <main>
-      <section class="products">
-        <div class="container">
-          <aside class="products-block-list">
-            <div class="name-product-list">
-              <h5>НАША ПРОДУКЦИЯ</h5>
+<main>
+  <section class="catalog">
+    <div class="container">
+      <h2 class="catalog-page-title"><?= the_title(); ?></h2>
+      <div class="catalog-page-list">
+        <?php
+        foreach ($products_cat as $single_cat) {
+          $term_image_id = get_term_meta( $single_cat->term_id, 'thumbnail_id', true );
+          $term_image = wp_get_attachment_url( $term_image_id );
+        ?>
+          <div class="catalog-page-item">
+            <div class="catalog-page-item-img-block">
+              <img src="<?= $term_image ?>" alt="">
             </div>
-            <ul class="products-list">
-              <li class="products-item">
-                <a href="">
-                  <img src="tmp/sv-cteklo/assets/img/peskostrujnaja-obrabotka-diskov-1.jpg" alt="">
-                  <h6>Скинали для кухни</h6>
-                </a>
-              </li>
-              <li class="products-item">
-                <a href="">
-                  <img src="assets/img/fonbg.jpg" alt="">
-                  <h6>Стеклянные двери</h6>
-                </a>
-              </li>
-              <li class="products-item">
-                <a href="">
-                  <img src="tmp/sv-cteklo/assets/img/dfg.png" alt="">
-                  <h6>Обеденные столы</h6>
-                </a>
-              </li>
-              <li class="products-item">
-                <a href="">
-                  <img src="tmp/sv-cteklo/assets/img/usl1.png" alt="">
-                  <h6>Зеркала под заказ</h6>
-                </a>
-              </li>
-            </ul>
-          </aside>
-        </div>
-      </section>
-    </main>
+            <p><?= $single_cat->name; ?></p>
+            <a href="<?= get_term_link($single_cat); ?>">Подробнее</a>
+          </div>
+        <?php
+        }
+        ?>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
