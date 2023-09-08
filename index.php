@@ -4,10 +4,14 @@ Template Name: Главная
 */
 
 get_header();
+
+$discription_main = CFS()->get('discription_home_page');
+
+$bg_main = CFS()->get('bg_main_page');
 ?>
 
 <main>
-  <section class="home-slider" style="background-image: url(<?= CFS()->get('bg_home_slider'); ?>);">
+  <section class="home-slider" style="background-image: url(<?= $bg_main[0]['bg_home_slider']; ?>);">
     <div class="container slider-container">
       <?php echo do_shortcode('[slick-slider extra_class="slider-sv" design="design-2" dots="false" hover_pause="true" image_fit="true" sliderheight="250"]'); ?>
     </div>
@@ -31,9 +35,6 @@ get_header();
           ?>
         </div>
       </aside>
-      <?php
-      $discription_main = CFS()->get('discription_home_page');
-      ?>
       <section class="home-main-info">
         <div class="home-about">
           <h3>КОМПАНИЯ ОДО «СВ-СТЕКЛО»</h3>
@@ -50,7 +51,8 @@ get_header();
             <?php
             $posts = get_posts([
               'post_type' => 'product',
-              'category' => 'services',
+              'product_cat' => 'services',
+              'orderby' => 'rand',
               'numberposts' => 5,
             ]);
             foreach ($posts as $post) {
@@ -63,6 +65,7 @@ get_header();
               </div>
             <?php
             }
+            wp_reset_postdata();
             ?>
             <a href="" class="home-services-all-btn">
               <h3>Посмотреть <br> все услуги</h3>
@@ -74,8 +77,27 @@ get_header();
           <p>
             <?= $discription_main[0]['home_discription_catalog_products'] ?>
           </p>
-          <div class="home-catalog-list">
-            <?php echo do_shortcode('[products category="accessories" limit="4"]') ?>
+          <div class="home-products-page-list">
+            <?php
+            $services_posts = get_posts([
+              'numberposts' => 4,
+              'orderby' => 'rand',
+              'post_type' => 'product',
+              'product_cat' => 'products',
+            ]);
+            foreach ($services_posts as $single_post) {
+            ?>
+              <div class="home-products-page-item">
+                <div class="home-products-page-item-img-block">
+                  <?= get_the_post_thumbnail($single_post); ?>
+                </div>
+                <p><?= $single_post->post_title; ?></p>
+                <a href="<?= $single_post->guid ?>">Подробнее</a>
+              </div>
+            <?php
+            }
+            wp_reset_postdata();
+            ?>
           </div>
           <?php
           ?>
@@ -84,7 +106,7 @@ get_header();
     </div>
   </div>
 
-  <section class="home-advantages" style="background-image: url(<?= CFS()->get('bg_home_advantages'); ?>);">
+  <section class="home-advantages" style="background-image: url(<?= $bg_main[0]['bg_home_advantages']; ?>);">
     <div class="container">
       <h2>
         <?= get_category(7, ARRAY_A)['name'] ?>
