@@ -22,6 +22,14 @@ $contacts = get_posts([
   </section>
 </footer>
 <?php wp_footer(); ?>
+
+<script>
+  jQuery(document).ready(function($) {
+    $(".woocommerce-product-gallery__image").click(function() {
+      $(".woocommerce-product-gallery__trigger").trigger('click');
+    });
+  });s
+</script>
 </body>
 
 </html>

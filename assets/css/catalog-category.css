@@ -72,3 +72,9 @@
 .products-category-page-item:hover p::after {
   left: -30px;
 }
+
+.products-category-page-result-count {
+  margin-top: 10px;
+  color: #6d737a;
+  font-size: 15px;
+}

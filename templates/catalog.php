@@ -9,7 +9,7 @@ get_header();
 $catalog_cat = get_terms([
   'taxonomy' => 'product_cat',
   'hide_empty' => false,
-  'parent' => 42
+  'parent' => 42,
 ]);
 
 ?>
