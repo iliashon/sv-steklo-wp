@@ -49,7 +49,7 @@ function yourtheme_setup()
     add_theme_support('wc-product-gallery-slider');
 }
 
-// show_admin_bar(false);
+show_admin_bar(false);
 
 add_filter( 'woocommerce_product_tabs', 'sb_woo_remove_reviews_tab', 98);
 function sb_woo_remove_reviews_tab($tabs) {

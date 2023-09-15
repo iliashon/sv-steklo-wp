@@ -3,6 +3,8 @@
   justify-content: space-between;
   align-items: center;
   margin: 20px 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 #logoheader {
@@ -137,10 +139,11 @@
 
   #button-burger {
     display: block;
+    z-index: 15;
   }
 
   #nav-bar-burger {
     display: flex;
-    z-index: 1;
+    z-index: 10;
   }
 }

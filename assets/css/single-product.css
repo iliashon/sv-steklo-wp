@@ -66,11 +66,6 @@
   height: 350px;
 }
 
-.wp-post-image {
-  height: 100%;
-  width: 100%;
-}
-
 .tabs {
   display: none;
 }
@@ -80,7 +75,17 @@
   font-size: 22px;
 }
 
-.entry-content p {
+.entry-content p, span {
   font-size: 15px;
   color: #6d737a;
+}
+
+@media (max-width: 1000px) {
+  .woocommerce-product-gallery {
+    width: 100%;
+  }
+
+  .discription-product {
+    width: 100%;
+  }
 }
